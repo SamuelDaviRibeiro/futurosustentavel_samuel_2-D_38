@@ -3,76 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro Sustentável - EcoGarrafa</title>
+    <title>Futuro Sustentável</title>
+    <!-- Link para o CSS (será inserido depois) -->
     <link rel="stylesheet" href="style.css">
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <div id="barra-progresso"></div>
-
-    <nav id="menu-topo">
-        <h2 id="logo">EcoFuturo</h2>
-        <ul>
-            <li><a href="#slide1">Início</a></li>
-            <li><a href="#slide2">O Problema</a></li>
-            <li><a href="#slide3">Produto</a></li>
-            <li><a href="#slide4">Como Funciona</a></li>
-            <li><a href="#slide5">Benefícios</a></li>
-            <li><a href="#slide6">Comprar</a></li>
-        </ul>
-        <button id="btn-tema">🌙</button>
-    </nav>
-
-    <header id="slide1" class="secao">
-        <h1 id="titulo-principal">O Futuro em Suas Mãos</h1>
-        <p>A primeira garrafa sustentável que ajuda você e o planeta.</p>
-        <button class="btn-comprar" id="btn-comprar-topo">Quero a minha!</button>
+    <!-- Cabeçalho com menu -->
+    <header>
+        <div class="logo">
+            <h1>🌱 Futuro Sustentável</h1>
+        </div>
+        <!-- Botão do menu hambúrguer (visível no mobile) -->
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav" id="nav">
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#contexto">Contexto</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#equilibrio">Equilíbrio</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+                <li><a href="#produto">Produto</a></li>
+            </ul>
+        </nav>
+        <!-- Botão para trocar tema (claro/escuro) -->
+        <button class="btn-tema" id="btn-tema"><i class="fas fa-moon"></i></button>
     </header>
 
-    <section id="slide2" class="secao">
-        <h2>Por que precisamos mudar?</h2>
-        <p>Plásticos de uso único estão destruindo nossos oceanos.</p>
-    </section>
-
-    <section id="slide3" class="secao">
-        <h2>Conheça a EcoGarrafa</h2>
-        <div class="produto-box" id="caixa-produto">
-            <h3>Design Sustentável</h3>
-            <p>Feita 100% de materiais reciclados e bambu.</p>
+    <!-- Seção Início (Hero) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>FUTURO SUSTENTÁVEL</h2>
+            <p>Produção responsável e preservação ambiental</p>
+            <a href="#produto" class="btn">Conheça nosso produto</a>
         </div>
     </section>
 
-    <section id="slide4" class="secao">
-        <h2>Como Funciona</h2>
-        <ul class="lista-sanfona">
-            <li class="item-sanfona">
-                <strong>1. Filtra a água 🔽</strong>
-                <p class="texto-oculto">Um filtro de carvão ativado limpa a água de qualquer torneira.</p>
-            </li>
-            <li class="item-sanfona">
-                <strong>2. Mantém a temperatura 🔽</strong>
-                <p class="texto-oculto">Isolamento térmico de 24 horas para frio e 12 para quente.</p>
-            </li>
-        </ul>
+    <!-- Seção Contexto -->
+    <section id="contexto" class="contexto">
+        <div class="container">
+            <h2 class="section-title">Contexto Atual</h2>
+            <div class="card-contexto">
+                <p><strong>📉 O modelo de produção contemporâneo enfrenta o desafio do esgotamento de recursos naturais.</strong> Segundo dados do PNUMA, a extração de matérias-primas triplicou nas últimas décadas.</p>
+            </div>
+            <div class="card-contexto">
+                <p><strong>⚖️ O Dilema:</strong> Como manter o crescimento socioeconômico sem comprometer a regeneração dos biomas?</p>
+            </div>
+            <div class="card-contexto">
+                <p><strong>🎯 Objetivo:</strong> Analisar os pilares que sustentam a produção responsável e a mitigação de impactos ambientais.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="slide5" class="secao">
-        <h2>Benefícios para Você e o Planeta</h2>
-        <ul>
-            <li>Economia de dinheiro a longo prazo.</li>
-            <li>Redução da pegada de carbono.</li>
-            <li>Saúde garantida sem BPA.</li>
-        </ul>
+    <!-- Seção Pilares -->
+    <section id="pilares" class="pilares">
+        <div class="container">
+            <h2 class="section-title">Os Três Pilares</h2>
+            <div class="cards-container">
+                <div class="card pilar-card" data-pilar="economico">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>ECONÔMICO</h3>
+                    <p>Viabilidade financeira e gestão de riscos.</p>
+                    <!-- Detalhe extra que aparece ao clicar (JS) -->
+                    <div class="extra-detalhe" id="detalhe-economico" style="display: none;">
+                        <p>Investir em sustentabilidade reduz custos a longo prazo e atrai investidores.</p>
+                    </div>
+                </div>
+                <div class="card pilar-card" data-pilar="social">
+                    <i class="fas fa-users"></i>
+                    <h3>SOCIAL</h3>
+                    <p>Equidade, saúde e bem-estar das comunidades.</p>
+                    <div class="extra-detalhe" id="detalhe-social" style="display: none;">
+                        <p>Empresas que respeitam direitos humanos fortalecem sua reputação.</p>
+                    </div>
+                </div>
+                <div class="card pilar-card" data-pilar="ambiental">
+                    <i class="fas fa-leaf"></i>
+                    <h3>AMBIENTAL</h3>
+                    <p>Preservação da biodiversidade e redução da pegada de carbono.</p>
+                    <div class="extra-detalhe" id="detalhe-ambiental" style="display: none;">
+                        <p>Práticas como logística reversa e energias renováveis são essenciais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="slide6" class="secao">
-        <h2>Faça parte da mudança</h2>
-        <p>Adquira sua EcoGarrafa hoje por apenas R$ 89,90.</p>
-        <button class="btn-comprar" id="btn-comprar-final">Comprar Agora</button>
+    <!-- Seção Equilíbrio -->
+    <section id="equilibrio" class="equilibrio">
+        <div class="container">
+            <h2 class="section-title">EQUILÍBRIO ENTRE PRODUÇÃO E MEIO AMBIENTE</h2>
+            <ul class="topicos">
+                <li><strong>Transição de Modelos:</strong> Superação do modelo "extrair-produzir-descartar" para o modelo circular, onde o resíduo é reintegrado como insumo.</li>
+                <li><strong>Ecoeficiência Industrial:</strong>
+                    <ul>
+                        <li>Uso de Energias Renováveis: Redução da dependência de combustíveis fósseis.</li>
+                        <li>Logística Reversa: Responsabilidade sobre o ciclo de vida do produto (PNUMA/EcoDebate).</li>
+                        <li>Agroflorestas e Bioeconomia: Práticas que permitem produzir mantendo a floresta em pé e os serviços ecossistêmicos ativos (Fonte: WWF-Brasil).</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </section>
 
-    <button id="btn-topo">⬆️</button>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <div class="container">
+            <h2 class="section-title">CONCLUSÃO</h2>
+            <div class="card-conclusao">
+                <p><strong>Síntese:</strong> O equilíbrio não é um limite ao desenvolvimento, mas uma nova forma de projetá-lo.</p>
+                <p><strong>Responsabilidade Compartilhada:</strong> O futuro sustentável depende da tríade: Políticas Públicas (Governo), Práticas ESG (Empresas) e Consumo Consciente (Cidadãos).</p>
+                <p><strong>Perspectiva:</strong> A restauração de ecossistemas, conforme promovido pela "Década da Restauração da ONU", é hoje o elo necessário para a prosperidade econômica e climática.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção Produto (criada para vender um produto) -->
+    <section id="produto" class="produto">
+        <div class="container">
+            <h2 class="section-title">Nosso Produto Sustentável</h2>
+            <div class="produto-card">
+                <div class="produto-imagem" id="produto-img">
+                    <!-- Ícone como placeholder da imagem -->
+                    <i class="fas fa-tint" style="font-size: 8rem; color: #2e7d32;"></i>
+                </div>
+                <div class="produto-info">
+                    <h3>EcoGarrafa</h3>
+                    <p>Garrafa reutilizável feita de material reciclado e biodegradável. Reduza o plástico no planeta!</p>
+                    <p><strong>Preço: R$ 49,90</strong></p>
+                    <div class="botoes-produto">
+                        <button class="btn btn-comprar" id="btn-comprar">Comprar</button>
+                        <button class="btn btn-saiba-mais" id="btn-saiba-mais">Saiba mais</button>
+                    </div>
+                    <p class="contador-cliques" id="contador-cliques">Cliques no botão Comprar: <span id="cliques">0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>🌿 MUITO OBRIGADO</p>
+            <p>Samuel / 2ºD / Programação</p>
+            <p>&copy; 2025 - Projeto Escolar</p>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button class="btn-topo" id="btn-topo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Link para o JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
