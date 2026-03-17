@@ -3,160 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuro Sustentável</title>
-    <!-- Link para o CSS (será inserido depois) -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Ícones Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Futuro Sustentável - Samuel</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Cabeçalho com menu -->
-    <header>
-        <div class="logo">
-            <h1>🌱 Futuro Sustentável</h1>
-        </div>
-        <!-- Botão do menu hambúrguer (visível no mobile) -->
-        <div class="menu-toggle" id="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
+    <!-- MENU NO TOPO -->
+    <header class="header">
+        <div class="logo">🌱 Futuro Sustentável</div>
         <nav class="nav" id="nav">
-            <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#contexto">Contexto</a></li>
-                <li><a href="#pilares">Pilares</a></li>
-                <li><a href="#equilibrio">Equilíbrio</a></li>
-                <li><a href="#conclusao">Conclusão</a></li>
-                <li><a href="#produto">Produto</a></li>
-            </ul>
+            <a href="#hero">Início</a>
+            <a href="#tripe">Tripé</a>
+            <a href="#producao">A Produção</a>
+            <a href="#equilibrio">Equilíbrio</a>
+            <a href="#conclusao">Conclusão</a>
+            <a href="#obrigado">Obrigado</a>
         </nav>
-        <!-- Botão para trocar tema (claro/escuro) -->
-        <button class="btn-tema" id="btn-tema"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" id="hamburger">☰</button>
     </header>
 
-    <!-- Seção Início (Hero) -->
-    <section id="inicio" class="hero">
+    <!-- HERO - Slide 1 -->
+    <section id="hero" class="hero">
+        <img src="imagens/1.png" alt="Futuro Sustentável" class="hero-img">
         <div class="hero-content">
-            <h2>FUTURO SUSTENTÁVEL</h2>
-            <p>Produção responsável e preservação ambiental</p>
-            <a href="#produto" class="btn">Conheça nosso produto</a>
+            <h1>FUTURO SUSTENTÁVEL</h1>
+            <p>Produção responsável • Equilíbrio ambiental • Legado para o amanhã</p>
+            <a href="#tripe" class="btn">Explorar o Tripé</a>
         </div>
     </section>
 
-    <!-- Seção Contexto -->
-    <section id="contexto" class="contexto">
-        <div class="container">
-            <h2 class="section-title">Contexto Atual</h2>
-            <div class="card-contexto">
-                <p><strong>📉 O modelo de produção contemporâneo enfrenta o desafio do esgotamento de recursos naturais.</strong> Segundo dados do PNUMA, a extração de matérias-primas triplicou nas últimas décadas.</p>
+    <!-- SEÇÃO 2 - TRIPÉ DA SUSTENTABILIDADE -->
+    <section id="tripe" class="section">
+        <h2>TRIPÉ DA SUSTENTABILIDADE</h2>
+        <div class="tripe-grid">
+            <div class="card" data-pilar="economico">
+                <h3>ECONÔMICO</h3>
+                <p>Viabilidade financeira e gestão de riscos.</p>
             </div>
-            <div class="card-contexto">
-                <p><strong>⚖️ O Dilema:</strong> Como manter o crescimento socioeconômico sem comprometer a regeneração dos biomas?</p>
+            <div class="card" data-pilar="social">
+                <h3>SOCIAL</h3>
+                <p>Equidade, saúde e bem-estar das comunidades.</p>
             </div>
-            <div class="card-contexto">
-                <p><strong>🎯 Objetivo:</strong> Analisar os pilares que sustentam a produção responsável e a mitigação de impactos ambientais.</p>
+            <div class="card" data-pilar="ambiental">
+                <h3>AMBIENTAL</h3>
+                <p>Preservação da biodiversidade e redução da pegada de carbono.</p>
             </div>
+        </div>
+        <img src="imagens/3.png" alt="Tripé" class="section-img">
+    </section>
+
+    <!-- SEÇÃO 3 - A PRODUÇÃO -->
+    <section id="producao" class="section">
+        <h2>A PRODUÇÃO</h2>
+        <img src="imagens/2.png" alt="A Produção" class="section-img">
+        <div class="content">
+            <h3>Contexto Atual</h3>
+            <p>O modelo de produção contemporâneo enfrenta o desafio do esgotamento de recursos naturais. Segundo dados do PNUMA, a extração de matérias-primas triplicou nas últimas décadas.</p>
+            <h3>O Dilema</h3>
+            <p>Como manter o crescimento socioeconômico sem comprometer a regeneração dos biomas?</p>
+            <h3>Objetivo</h3>
+            <p>Analisar os pilares que sustentam a produção responsável e a mitigação de impactos ambientais.</p>
         </div>
     </section>
 
-    <!-- Seção Pilares -->
-    <section id="pilares" class="pilares">
-        <div class="container">
-            <h2 class="section-title">Os Três Pilares</h2>
-            <div class="cards-container">
-                <div class="card pilar-card" data-pilar="economico">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>ECONÔMICO</h3>
-                    <p>Viabilidade financeira e gestão de riscos.</p>
-                    <!-- Detalhe extra que aparece ao clicar (JS) -->
-                    <div class="extra-detalhe" id="detalhe-economico" style="display: none;">
-                        <p>Investir em sustentabilidade reduz custos a longo prazo e atrai investidores.</p>
-                    </div>
-                </div>
-                <div class="card pilar-card" data-pilar="social">
-                    <i class="fas fa-users"></i>
-                    <h3>SOCIAL</h3>
-                    <p>Equidade, saúde e bem-estar das comunidades.</p>
-                    <div class="extra-detalhe" id="detalhe-social" style="display: none;">
-                        <p>Empresas que respeitam direitos humanos fortalecem sua reputação.</p>
-                    </div>
-                </div>
-                <div class="card pilar-card" data-pilar="ambiental">
-                    <i class="fas fa-leaf"></i>
-                    <h3>AMBIENTAL</h3>
-                    <p>Preservação da biodiversidade e redução da pegada de carbono.</p>
-                    <div class="extra-detalhe" id="detalhe-ambiental" style="display: none;">
-                        <p>Práticas como logística reversa e energias renováveis são essenciais.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- SEÇÃO 4 - EQUILÍBRIO -->
+    <section id="equilibrio" class="section">
+        <h2>EQUILÍBRIO ENTRE PRODUÇÃO E MEIO AMBIENTE</h2>
+        <img src="imagens/4.png" alt="Equilíbrio" class="section-img">
+        <ul class="bullet-list">
+            <li><strong>Transição de Modelos:</strong> Do modelo “extrair-produzir-descartar” para o modelo circular.</li>
+            <li><strong>Ecoeficiência Industrial:</strong> Uso de energias renováveis e logística reversa.</li>
+            <li><strong>Agroflorestas e Bioeconomia:</strong> Produzir mantendo a floresta em pé (WWF-Brasil).</li>
+        </ul>
     </section>
 
-    <!-- Seção Equilíbrio -->
-    <section id="equilibrio" class="equilibrio">
-        <div class="container">
-            <h2 class="section-title">EQUILÍBRIO ENTRE PRODUÇÃO E MEIO AMBIENTE</h2>
-            <ul class="topicos">
-                <li><strong>Transição de Modelos:</strong> Superação do modelo "extrair-produzir-descartar" para o modelo circular, onde o resíduo é reintegrado como insumo.</li>
-                <li><strong>Ecoeficiência Industrial:</strong>
-                    <ul>
-                        <li>Uso de Energias Renováveis: Redução da dependência de combustíveis fósseis.</li>
-                        <li>Logística Reversa: Responsabilidade sobre o ciclo de vida do produto (PNUMA/EcoDebate).</li>
-                        <li>Agroflorestas e Bioeconomia: Práticas que permitem produzir mantendo a floresta em pé e os serviços ecossistêmicos ativos (Fonte: WWF-Brasil).</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    <!-- SEÇÃO 5 - CONCLUSÃO -->
+    <section id="conclusao" class="section">
+        <h2>CONCLUSÃO</h2>
+        <img src="imagens/5.png" alt="Conclusão" class="section-img">
+        <ul class="bullet-list">
+            <li>O equilíbrio não é um limite ao desenvolvimento, mas uma nova forma de projetá-lo.</li>
+            <li>Responsabilidade compartilhada: Governo, Empresas (ESG) e Cidadãos.</li>
+            <li>A restauração de ecossistemas é o elo necessário para a prosperidade.</li>
+        </ul>
+        <button id="btn-comprar" class="btn-buy">Adquirir EcoVida – Embalagens Circulares</button>
     </section>
 
-    <!-- Seção Conclusão -->
-    <section id="conclusao" class="conclusao">
-        <div class="container">
-            <h2 class="section-title">CONCLUSÃO</h2>
-            <div class="card-conclusao">
-                <p><strong>Síntese:</strong> O equilíbrio não é um limite ao desenvolvimento, mas uma nova forma de projetá-lo.</p>
-                <p><strong>Responsabilidade Compartilhada:</strong> O futuro sustentável depende da tríade: Políticas Públicas (Governo), Práticas ESG (Empresas) e Consumo Consciente (Cidadãos).</p>
-                <p><strong>Perspectiva:</strong> A restauração de ecossistemas, conforme promovido pela "Década da Restauração da ONU", é hoje o elo necessário para a prosperidade econômica e climática.</p>
-            </div>
-        </div>
+    <!-- SEÇÃO 6 - MUITO OBRIGADO -->
+    <section id="obrigado" class="section obrigado">
+        <img src="imagens/6.png" alt="Muito Obrigado" class="section-img">
+        <h2>MUITO OBRIGADO!</h2>
+        <p>Samuel • 2ºD • Programação</p>
+        <button id="btn-confetti">🎉 Clique para comemorar</button>
     </section>
 
-    <!-- Seção Produto (criada para vender um produto) -->
-    <section id="produto" class="produto">
-        <div class="container">
-            <h2 class="section-title">Nosso Produto Sustentável</h2>
-            <div class="produto-card">
-                <div class="produto-imagem" id="produto-img">
-                    <!-- Ícone como placeholder da imagem -->
-                    <i class="fas fa-tint" style="font-size: 8rem; color: #2e7d32;"></i>
-                </div>
-                <div class="produto-info">
-                    <h3>EcoGarrafa</h3>
-                    <p>Garrafa reutilizável feita de material reciclado e biodegradável. Reduza o plástico no planeta!</p>
-                    <p><strong>Preço: R$ 49,90</strong></p>
-                    <div class="botoes-produto">
-                        <button class="btn btn-comprar" id="btn-comprar">Comprar</button>
-                        <button class="btn btn-saiba-mais" id="btn-saiba-mais">Saiba mais</button>
-                    </div>
-                    <p class="contador-cliques" id="contador-cliques">Cliques no botão Comprar: <span id="cliques">0</span></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
     <footer>
-        <div class="container">
-            <p>🌿 MUITO OBRIGADO</p>
-            <p>Samuel / 2ºD / Programação</p>
-            <p>&copy; 2025 - Projeto Escolar</p>
-        </div>
+        <p>© 2026 Samuel – Futuro Sustentável. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Botão Voltar ao Topo -->
-    <button class="btn-topo" id="btn-topo" title="Voltar ao topo"><i class="fas fa-arrow-up"></i></button>
+    <!-- MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-text"></p>
+        </div>
+    </div>
 
-    <!-- Link para o JavaScript -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
